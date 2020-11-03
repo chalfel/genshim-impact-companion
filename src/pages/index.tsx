@@ -11,39 +11,9 @@ import {
 } from '../styles/pages/TeamGenerator'
 import { FiTrash, FiSave, FiShare2, FiArrowRightCircle } from 'react-icons/fi'
 import { ICharacter } from '../interfaces/characters'
+import CharactersData from '../data/CharactersData'
 
-const Home: React.FC = () => {
-  const characters = [
-    {
-      id: 0,
-      name: 'Diluc',
-      element: 'fire',
-      imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915105012670.png'
-    },
-    {
-      id: 4,
-      name: 'Venti',
-      element: 'anemo',
-      imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20191122/2019112211143037621.png'
-    },
-    {
-      id: 5,
-      name: 'Barbara',
-      element: 'water',
-      imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915102571828.png'
-    },
-    {
-      id: 7,
-      name: 'Lisa',
-      element: 'eletric',
-      imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100915323235059.png'
-    }
-  ]
-
+const TeamGenerator: React.FC = () => {
   const options = [
     {
       name: 'delete',
@@ -68,7 +38,7 @@ const Home: React.FC = () => {
   ]
 
   const [characterList, setCharacterList] = useState<Array<ICharacter>>(
-    characters
+    CharactersData.slice(0, 4)
   )
 
   const shuffle = array => {
@@ -91,8 +61,8 @@ const Home: React.FC = () => {
   const onSpacePressed = (e: KeyboardEvent) => {
     const { code } = e
     if (code === 'Space') {
-      const newCharacterList = Object.assign([], shuffle(characterList))
-      setCharacterList(newCharacterList)
+      const newCharacterList = Object.assign([], shuffle(CharactersData))
+      setCharacterList(newCharacterList.slice(0, 4))
     }
   }
   useEffect(() => {
@@ -100,11 +70,11 @@ const Home: React.FC = () => {
   }, [])
 
   const colorsByElement = {
-    fire: '#A92523',
-    water: '#6BB9C7',
+    pyro: '#A92523',
+    hydro: '#6BB9C7',
     anemo: '#0B6E4F',
-    eletric: '#736CED',
-    ice: '#cdfff9',
+    electro: '#736CED',
+    cryo: '#cdfff9',
     geo: '#fa9f42'
   }
   return (
@@ -121,12 +91,13 @@ const Home: React.FC = () => {
         </CommandBarOptions>
       </CommandBar>
       <CharacterContainer>
-        {characterList.map(({ name, id, element, imgUrl }) => (
+        {characterList.map(({ name, id, element, imgUrl, characterLocked }) => (
           <CharacterCard
             key={id}
             characterName={name}
             color={colorsByElement[element]}
             imgUrl={imgUrl}
+            characterLocked={characterLocked}
           />
         ))}
       </CharacterContainer>
@@ -134,4 +105,4 @@ const Home: React.FC = () => {
   )
 }
 
-export default Home
+export default TeamGenerator

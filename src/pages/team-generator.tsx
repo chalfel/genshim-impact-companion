@@ -13,34 +13,38 @@ import { FiTrash, FiSave, FiShare2, FiArrowRightCircle } from 'react-icons/fi'
 import { ICharacter } from '../interfaces/characters'
 
 const TeamGenerator: React.FC = () => {
-  const characters = [
+  const characters: ICharacter[] = [
     {
       id: 0,
       name: 'Diluc',
-      element: 'fire',
+      element: 'pyro',
       imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915105012670.png'
+        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915105012670.png',
+      characterLocked: false
     },
     {
       id: 4,
       name: 'Venti',
       element: 'anemo',
       imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20191122/2019112211143037621.png'
+        'https://uploadstatic-sea.mihoyo.com/contentweb/20191122/2019112211143037621.png',
+      characterLocked: false
     },
     {
       id: 5,
       name: 'Barbara',
-      element: 'water',
+      element: 'hydro',
       imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915102571828.png'
+        'https://uploadstatic-sea.mihoyo.com/contentweb/20200609/2020060915102571828.png',
+      characterLocked: true
     },
     {
       id: 7,
       name: 'Lisa',
-      element: 'eletric',
+      element: 'electro',
       imgUrl:
-        'https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100915323235059.png'
+        'https://uploadstatic-sea.mihoyo.com/contentweb/20191009/2019100915323235059.png',
+      characterLocked: false
     }
   ]
 
@@ -68,7 +72,7 @@ const TeamGenerator: React.FC = () => {
   ]
 
   const [characterList, setCharacterList] = useState<Array<ICharacter>>(
-    characters
+    characters.slice(0, 3)
   )
 
   const shuffle = array => {
@@ -91,8 +95,8 @@ const TeamGenerator: React.FC = () => {
   const onSpacePressed = (e: KeyboardEvent) => {
     const { code } = e
     if (code === 'Space') {
-      const newCharacterList = Object.assign([], shuffle(characterList))
-      setCharacterList(newCharacterList)
+      const newCharacterList = Object.assign([], shuffle(characters))
+      setCharacterList(newCharacterList.slice(0, 3))
     }
   }
   useEffect(() => {
@@ -100,11 +104,11 @@ const TeamGenerator: React.FC = () => {
   }, [])
 
   const colorsByElement = {
-    fire: '#A92523',
-    water: '#6BB9C7',
+    pyro: '#A92523',
+    hydro: '#6BB9C7',
     anemo: '#0B6E4F',
-    eletric: '#736CED',
-    ice: '#cdfff9',
+    electro: '#736CED',
+    cryo: '#cdfff9',
     geo: '#fa9f42'
   }
   return (
@@ -121,12 +125,13 @@ const TeamGenerator: React.FC = () => {
         </CommandBarOptions>
       </CommandBar>
       <CharacterContainer>
-        {characterList.map(({ name, id, element, imgUrl }) => (
+        {characterList.map(({ name, id, element, imgUrl, characterLocked }) => (
           <CharacterCard
             key={id}
             characterName={name}
             color={colorsByElement[element]}
             imgUrl={imgUrl}
+            characterLocked={characterLocked}
           />
         ))}
       </CharacterContainer>

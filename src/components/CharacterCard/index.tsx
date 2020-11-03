@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import { FiGrid, FiUnlock, FiLock, FiInfo, FiStar } from 'react-icons/fi'
 
+import { FiGrid, FiUnlock, FiLock, FiInfo, FiStar } from 'react-icons/fi'
 import {
   CharacterImage,
   CharacterName,
@@ -14,11 +14,13 @@ interface CharacterCardProps {
   color: string
   characterName: string
   imgUrl: string
+  characterLocked: boolean
 }
 const CharacterCard: React.FC<CharacterCardProps> = ({
   color,
   characterName,
-  imgUrl
+  imgUrl,
+  characterLocked
 }: CharacterCardProps) => {
   const [optionsEnabled, setOptionsEnabled] = useState(false)
   const options = [
@@ -29,7 +31,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
     },
     {
       name: 'lockChar',
-      Icon: FiUnlock,
+      Icon: characterLocked ? FiLock : FiUnlock,
       onClick: () => null
     },
     {

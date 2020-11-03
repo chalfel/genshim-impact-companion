@@ -8,6 +8,7 @@ import Document, {
   NextScript
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
+import favIcon from '../images/favicon.ico'
 
 export default class MyDocument extends Document {
   static async getInitialProps(
@@ -48,7 +49,7 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
 
-          <link rel="icon" href="https://rocketseat.com.br/favicon.ico" />
+          <link rel="icon" href={favIcon} />
         </Head>
         <body>
           <Main />

@@ -3,4 +3,5 @@ export interface ICharacter {
   name: string
   imgUrl: string
   element: string
+  characterLocked: boolean
 }

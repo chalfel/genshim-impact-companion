@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   return (
     <Container>
       <LogoContainer>
-        <Logo>PAIMON HELPER</Logo>
+        <Logo>GENSHIN COMPANION</Logo>
       </LogoContainer>
       <NavBar>
         <NavBarItem>
