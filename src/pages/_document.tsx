@@ -43,12 +43,14 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
-
+          <meta
+            name="description"
+            content="Encontre os melhores times ou crie você mesmo, veja as melhores builds, entenda o funcionamento dos elementos do jogo"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
             rel="stylesheet"
           />
-
           <link rel="icon" href={favIcon} />
         </Head>
         <body>

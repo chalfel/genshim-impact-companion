@@ -57,7 +57,7 @@ const CharacterCard: React.FC<CharacterCardProps> = ({
       onMouseOut={toggleOptions}
     >
       <CharacterName enabled={optionsEnabled}>{characterName} </CharacterName>
-      <CharacterImage src={imgUrl} />
+      <CharacterImage src={imgUrl} alt={characterName} />
       <OptionsContainer enabled={optionsEnabled}>
         <OptionList>
           {options.map(({ name, Icon, onClick }) => (
