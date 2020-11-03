@@ -24,21 +24,21 @@ const CharactersData: ICharacter[] = [
     id: 0,
     name: 'Diluc',
     element: 'pyro',
-    imgUrl: Diluc,
+    imgUrl: '/images/diluc.png',
     characterLocked: false
   },
   {
     id: 1,
     name: 'Venti',
     element: 'anemo',
-    imgUrl: Venti,
+    imgUrl: '/images/venti.png',
     characterLocked: false
   },
   {
     id: 2,
     name: 'Barbara',
     element: 'hydro',
-    imgUrl: Barbara,
+    imgUrl: '/images/barbara.png',
     characterLocked: true
   },
   {
