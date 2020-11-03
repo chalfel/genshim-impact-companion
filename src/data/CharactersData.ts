@@ -45,112 +45,112 @@ const CharactersData: ICharacter[] = [
     id: 3,
     name: 'Lisa',
     element: 'electro',
-    imgUrl: Lisa,
+    imgUrl: '/images/lisa.png',
     characterLocked: false
   },
   {
     id: 4,
     name: 'Bennett',
     element: 'pyro',
-    imgUrl: Bennett,
+    imgUrl: '/images/bennett.png',
     characterLocked: false
   },
   {
     id: 5,
     name: 'Childe',
     element: 'hydro',
-    imgUrl: Childe,
+    imgUrl: '/images/childe.png',
     characterLocked: false
   },
   {
     id: 6,
     name: 'Chongyun',
     element: 'cryo',
-    imgUrl: Chongyun,
+    imgUrl: '/images/chongyun.png',
     characterLocked: false
   },
   {
     id: 7,
     name: 'Fishe',
     element: 'electro',
-    imgUrl: Fishe,
+    imgUrl: '/images/fishe.png',
     characterLocked: false
   },
   {
     id: 8,
     name: 'Beidou',
     element: 'electro',
-    imgUrl: Beidou,
+    imgUrl: '/images/beidou.png',
     characterLocked: false
   },
   {
     id: 9,
     name: 'Jean',
     element: 'anemo',
-    imgUrl: Jean,
+    imgUrl: '/images/jean.png',
     characterLocked: false
   },
   {
     id: 10,
     name: 'Kaeya',
     element: 'hydro',
-    imgUrl: Kaeya,
+    imgUrl: '/images/kaeya.png',
     characterLocked: false
   },
   {
     id: 11,
     name: 'Keqing',
     element: 'electro',
-    imgUrl: Keqing,
+    imgUrl: '/images/keqing.png',
     characterLocked: false
   },
   {
     id: 12,
     name: 'Mona',
     element: 'hydro',
-    imgUrl: Mona,
+    imgUrl: '/images/mona.png',
     characterLocked: false
   },
   {
     id: 13,
     name: 'Ningguang',
     element: 'geo',
-    imgUrl: Ningguang,
+    imgUrl: '/images/ningguang.png',
     characterLocked: false
   },
   {
     id: 14,
     name: 'Noelle',
     element: 'geo',
-    imgUrl: Noelle,
+    imgUrl: '/images/noelle.png',
     characterLocked: false
   },
   {
     id: 15,
     name: 'Qiqi',
     element: 'cryo',
-    imgUrl: Qiqi,
+    imgUrl: '/images/qiqi.png',
     characterLocked: false
   },
   {
     id: 16,
     name: 'Sucrose',
     element: 'anemo',
-    imgUrl: Sucrose,
+    imgUrl: '/images/sucrose.png',
     characterLocked: false
   },
   {
     id: 17,
     name: 'Xianglin',
     element: 'pyro',
-    imgUrl: Xianglin,
+    imgUrl: '/images/xianglin.png',
     characterLocked: false
   },
   {
     id: 18,
     name: 'Xingqiu',
     element: 'hydro',
-    imgUrl: Xingqiu,
+    imgUrl: '/images/xingqiu.png',
     characterLocked: false
   }
 ]

@@ -52,7 +52,7 @@ export default class MyDocument extends Document {
             content="di60hBuq0xcfyJg6O2g9BvhbUXB-GMUrVGvFYt0DQb8"
           />
           <link
-            href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
+            href="https://fonts.googleapis.com/css?family=Roboto:400,800,700"
             rel="stylesheet"
           />
           <meta
