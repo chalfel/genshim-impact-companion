@@ -55,6 +55,11 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
             rel="stylesheet"
           />
+          <meta
+            name="keywords"
+            content="genshin, impact, companion, help, helper, diluc, venti, xiao, paimon, game, mmorpg, mobile, ps4, switch, genshin impact, gems, free grems"
+          />
+          <meta name="description" content="" />
           <link rel="icon" href={favIcon} />
         </Head>
         <body>
