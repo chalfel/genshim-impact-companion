@@ -47,6 +47,10 @@ export default class MyDocument extends Document {
             name="description"
             content="Encontre os melhores times ou crie você mesmo, veja as melhores builds, entenda o funcionamento dos elementos do jogo"
           />
+          <meta
+            name="google-site-verification"
+            content="di60hBuq0xcfyJg6O2g9BvhbUXB-GMUrVGvFYt0DQb8"
+          />
           <link
             href="https://fonts.googleapis.com/css?family=Roboto:400,500,700"
             rel="stylesheet"
