@@ -43,6 +43,8 @@ export default class MyDocument extends Document {
       <Html lang="pt">
         <Head>
           <meta charSet="utf-8" />
+          <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+
           <meta
             name="description"
             content="Encontre os melhores times ou crie você mesmo, veja as melhores builds, entenda o funcionamento dos elementos do jogo"
@@ -56,11 +58,16 @@ export default class MyDocument extends Document {
             rel="stylesheet"
           />
           <meta
+            name="viewport"
+            content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"
+          />
+          <meta
             name="keywords"
             content="genshin, impact, companion, help, helper, diluc, venti, xiao, paimon, game, mmorpg, mobile, ps4, switch, genshin impact, gems, free grems"
           />
           <meta name="description" content="" />
           <link rel="icon" href={favIcon} />
+          <link rel="manifest" href="/manifest.json" />
         </Head>
         <body>
           <Main />
