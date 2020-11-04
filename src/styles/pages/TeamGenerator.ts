@@ -13,6 +13,7 @@ export const Container = styled.div`
 export const CharacterContainer = styled.div`
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
   height: 80vh;
   margin: 0 auto;
